@@ -8,7 +8,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Deploy
-        run: echo "Deploying to production..."
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: |
+          echo "===================="
+          echo "🚀 Deploying to production..."
+          echo "This confirms the workflow runs correctly!"
+          echo "===================="
 
